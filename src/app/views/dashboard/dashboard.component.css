@@ -1,0 +1,39 @@
+#menu {
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+}
+
+#menu-btn button {
+  width: auto;
+  height: 50px;
+}
+
+
+#content-container {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: whitesmoke;
+}
+
+#bar-chart {
+  border: 1px lightgrey solid;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px lightgrey;
+}
+
+#line-chart-container {
+  border: 1px lightgrey solid;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px lightgrey;
+}
+
+#table-container {
+  border: 1px lightgrey solid;
+  box-shadow: 10px 5px 5px lightgrey;
+}
+
+#graphique {
+  box-shadow: 10px 5px 5px lightgrey;
+}

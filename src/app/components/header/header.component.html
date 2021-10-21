@@ -1,0 +1,5 @@
+<div *ngIf="!isConnected" class="container-fluid d-flex justify-content-between m-0 p-0 bg-black">
+  <h1 class="text-light text-center m-2">Dashboard</h1>
+  <button type="button" class="btn btn-dark my-auto me-2" (click)="onClickSignOut()" *ngIf="isConnected">ME
+    DECONNECTER</button>
+</div>

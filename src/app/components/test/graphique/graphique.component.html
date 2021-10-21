@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="container-fluid">
+    <div class="card p-3">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <h5 class="card-title text-muted">Top Animal Sales</h5>
+        <app-dropdown-menu></app-dropdown-menu>
+      </div>
+      <div class="chart-wrapper">
+        <canvas baseChart [datasets]="datasets" [labels]="labels" [type]="type">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<div class=" container-fluid d-flex flex-row m-0 p-0 position-absolute">
+
+  <div class="d-flex flex-column bg-dark col-2 position-fixed justify-content-between" id="menu">
+
+    <div>
+      <div class="m-0 p-0">
+        <h1 class="text-light text-center">Dashboard</h1>
+      </div>
+
+      <div class="container-fluid mt-3 mb-4">
+        <div class="d-flex flex-row">
+          <app-datepicker></app-datepicker>
+        </div>
+        <div class="form-check form-switch d-flex justify-content-center">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
+      </div>
+
+      <div id="menu-btn" class="d-flex flex-column justify-content-center">
+        <button type="button" class="btn btn-dark"><i class="bi bi-house-door-fill me-2"></i>Dashboard</button>
+        <button type="button" class="btn btn-dark">Analytics</button>
+        <button type="button" class="btn btn-dark">Market</button>
+        <button type="button" class="btn btn-dark">Onglet 4</button>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-dark" (click)="onClickSignOut();">ME DECONNECTER</button>
+
+  </div>
+
+  <div class="col-2"></div>
+
+  <div class="d-flex flex-column bg-grey col-10 position-relative" id="content-container">
+
+    <div class="container-fluid d-flex flex-row justify-content-between align-items-center mt-3">
+      <div class="d-flex flex-row col-6">
+        <div class="mx-2">
+          <div>
+            <app-stat-card title="Revenue" icon="bi-currency-euro" value="10000" percentage="5.1%" [success]="success">
+            </app-stat-card>
+          </div>
+          <div class="mt-3">
+            <app-stat-card class="mt-2" title="Customers" icon="bi-people-fill" value="10000" percentage="5.1%"
+              [success]="success"></app-stat-card>
+          </div>
+        </div>
+        <div class="mx-2">
+          <div>
+            <app-stat-card title="Orders" icon="bi-cart-plus-fill" value="10000" percentage="5.1%" [success]="!success">
+            </app-stat-card>
+          </div>
+          <div class="mt-3">
+            <app-stat-card title="Growth" icon="bi-bar-chart-fill" value="10000" percentage="5.1%" [success]="success">
+            </app-stat-card>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 bg-white" id="bar-chart">
+        <div class="d-flex flex-row justify-content-between align-items-center">
+          <h6 class="ms-3 text-muted">PROJECTIONS VS ACTUALS</h6>
+          <div>
+            <app-dropdown-menu></app-dropdown-menu>
+          </div>
+        </div>
+        <app-bar-chart></app-bar-chart>
+      </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-row justify-content-center align-items-center mt-5">
+
+      <div class="col-10 bg-white p-2" id="line-chart-container">
+        <div class="d-flex flex-row justify-content-between align-items-center">
+          <h2 class="text-muted">Nombres de Commandes</h2>
+          <app-dropdown-menu></app-dropdown-menu>
+        </div>
+        <div>
+
+        </div>
+        <div>
+          <app-line-chart></app-line-chart>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-flex flex-row justify-content-between align-items-start mt-5 mb-5">
+
+      <div class="bg-white col-8 ms-4" id="table-container">
+        <div class="d-flex flex-row justify-content-between">
+          <h2 class="text-muted ms-3 mt-1">Top Selling Products</h2>
+          <app-dropdown-menu></app-dropdown-menu>
+        </div>
+        <app-selling-table [products]="products"></app-selling-table>
+      </div>
+
+      <div class="col-3 me-5" id="graphique">
+        <app-graphique></app-graphique>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

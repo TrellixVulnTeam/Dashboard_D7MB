@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Animal</th>
+      <th scope="col">Category</th>
+      <th scope="col">Marque</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Orders</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr app-selling-table-line *ngFor="let product of products"
+    [id]="product.id"
+    [animal]="product.animal"
+    [category]="product.category"
+    [marque]="product.marque"
+    [name]="product.name"
+    [price]="product.price">
+    </tr>
+  </tbody>
+</table>
+
